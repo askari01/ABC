@@ -245,10 +245,10 @@ class ViewController: UIViewController, UITextViewDelegate {
         
         luckyWord = words[number]
         word.text = luckyWord
-        print ("lucky word:\(luckyWord): ", UIImage(named: luckyWord))
-        self.pic.image = UIImage(named: luckyWord)
+        print ("lucky word:\(luckyWord): ", UIImage(named: "\(luckyWord).jpg"))
+        self.pic.image = UIImage(named: "\(luckyWord).jpg")
         
-        let luckyNumber = Int(arc4random_uniform(UInt32(luckyWord.count-1)))
+        let luckyNumber = Int(arc4random_uniform(UInt32(luckyWord.characters.count - 1)))
         
         let characterIndex2 =  luckyWord.characters.index(luckyWord.characters.startIndex,offsetBy: luckyNumber)
         luckyChar = luckyWord.characters[characterIndex2]

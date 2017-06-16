@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		364DF6CD1EF25F7E00134533 /* PreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364DF6CC1EF25F7E00134533 /* PreViewController.swift */; };
+		36584AD91EF3E94E005C8AF5 /* Assets.xcassets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36F675061EE7EDB40072C8F8 /* Assets.xcassets */; };
 		36F675001EE7EDB40072C8F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F674FF1EE7EDB40072C8F8 /* AppDelegate.swift */; };
 		36F675021EE7EDB40072C8F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F675011EE7EDB40072C8F8 /* ViewController.swift */; };
 		36F675051EE7EDB40072C8F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F675031EE7EDB40072C8F8 /* Main.storyboard */; };
 		36F675071EE7EDB40072C8F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36F675061EE7EDB40072C8F8 /* Assets.xcassets */; };
 		36F6750A1EE7EDB40072C8F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36F675081EE7EDB40072C8F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		36584AD81EF3E931005C8AF5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				36584AD91EF3E94E005C8AF5 /* Assets.xcassets in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		364DF6CC1EF25F7E00134533 /* PreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +101,7 @@
 				36F674F81EE7EDB40072C8F8 /* Sources */,
 				36F674F91EE7EDB40072C8F8 /* Frameworks */,
 				36F674FA1EE7EDB40072C8F8 /* Resources */,
+				36584AD81EF3E931005C8AF5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -293,7 +308,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.askari.ABC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -308,7 +323,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.askari.ABC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
