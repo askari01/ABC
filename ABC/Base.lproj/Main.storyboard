@@ -25,11 +25,11 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="orx-g3-8Yu">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-Zg-E5H">
-                                <rect key="frame" x="87" y="301" width="146" height="61"/>
+                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-Zg-E5H">
+                                <rect key="frame" x="73" y="323" width="174" height="61"/>
                                 <color key="backgroundColor" red="0.21960784310000001" green="0.73725490199999999" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="High Score">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="High Score 31">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -60,20 +60,18 @@
                             <constraint firstItem="deM-En-8XP" firstAttribute="leading" secondItem="z0q-1p-89S" secondAttribute="leadingMargin" id="25B-rk-1cV"/>
                             <constraint firstItem="orx-g3-8Yu" firstAttribute="top" secondItem="z0q-1p-89S" secondAttribute="top" id="47k-k7-6gp"/>
                             <constraint firstItem="QRF-v4-mMQ" firstAttribute="leading" secondItem="z0q-1p-89S" secondAttribute="leadingMargin" constant="57" id="J6G-ft-Wgq"/>
+                            <constraint firstItem="Ag9-Zg-E5H" firstAttribute="trailing" secondItem="QRF-v4-mMQ" secondAttribute="trailing" id="JtQ-yP-qP9"/>
                             <constraint firstItem="deM-En-8XP" firstAttribute="top" secondItem="L8C-Xn-OEs" secondAttribute="bottom" constant="8" symbolic="YES" id="Kbj-4b-BK2"/>
+                            <constraint firstItem="Ag9-Zg-E5H" firstAttribute="top" secondItem="QRF-v4-mMQ" secondAttribute="bottom" constant="8" symbolic="YES" id="LwD-PS-Cgp"/>
                             <constraint firstItem="QRF-v4-mMQ" firstAttribute="top" secondItem="deM-En-8XP" secondAttribute="bottom" constant="98" id="O6Z-89-4Fh"/>
                             <constraint firstItem="orx-g3-8Yu" firstAttribute="leading" secondItem="z0q-1p-89S" secondAttribute="leading" id="Vqz-hK-goR"/>
+                            <constraint firstItem="Ag9-Zg-E5H" firstAttribute="leading" secondItem="QRF-v4-mMQ" secondAttribute="leading" id="ddc-a3-jhR"/>
                             <constraint firstItem="fZY-Jm-qza" firstAttribute="top" secondItem="QRF-v4-mMQ" secondAttribute="bottom" constant="253" id="dlC-xr-mc4"/>
                             <constraint firstItem="deM-En-8XP" firstAttribute="centerX" secondItem="QRF-v4-mMQ" secondAttribute="centerX" id="if7-7Z-7uL"/>
                             <constraint firstItem="orx-g3-8Yu" firstAttribute="centerX" secondItem="deM-En-8XP" secondAttribute="centerX" id="qzL-HG-GYb"/>
                             <constraint firstItem="orx-g3-8Yu" firstAttribute="bottom" secondItem="fZY-Jm-qza" secondAttribute="top" id="uUp-0p-zJc"/>
-                            <constraint firstItem="fZY-Jm-qza" firstAttribute="top" secondItem="Ag9-Zg-E5H" secondAttribute="bottom" constant="206" id="uaD-r1-09S"/>
+                            <constraint firstItem="fZY-Jm-qza" firstAttribute="top" secondItem="Ag9-Zg-E5H" secondAttribute="bottom" constant="184" id="uaD-r1-09S"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Ag9-Zg-E5H"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="highScoreButton" destination="Ag9-Zg-E5H" id="9eh-Oj-6D4"/>
@@ -82,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TqW-kt-V0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-940" y="137"/>
+            <point key="canvasLocation" x="-941.25" y="136.26760563380282"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -104,8 +102,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 32" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZA8-jk-d3s">
                                 <rect key="frame" x="213" y="23" width="92" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9t-GY-3dq">
@@ -281,6 +280,7 @@
                         <outlet property="score" destination="ZA8-jk-d3s" id="yj0-OC-vUT"/>
                         <outlet property="skipBtn" destination="KLl-7R-Sc8" id="2md-wh-0QH"/>
                         <outlet property="word" destination="m9t-GY-3dq" id="k4a-W0-rgQ"/>
+                        <segue destination="qsk-oa-n5Z" kind="show" identifier="gameOver" id="Rg8-Lc-rjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

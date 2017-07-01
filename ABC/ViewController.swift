@@ -123,12 +123,17 @@ class ViewController: UIViewController, UITextViewDelegate {
 //    var button = []
     var buttonCount = 0
     
+    // create defaults
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         skipBtn.layer.cornerRadius = 4
         repeatBtn.layer.cornerRadius = 4
         checkBtn.layer.cornerRadius = 4
+        score.layer.cornerRadius = 4
+//        score.layer.borderWidth = 2
         pic.layer.cornerRadius = 4
         pic.layer.borderWidth = 2
 //        pic.layer.borderColor = #imageLiteral(resourceName: "black") as! CGColor
@@ -300,49 +305,76 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
     
     func gameCheck() {
+        self.highScoreCheck()
         if incorrect == 3 {
             s = ""
             luckyWord = ""
             scored = 0
             incorrect = 0
+            let attributedString = NSAttributedString(string: "Game Over", attributes: [
+                NSFontAttributeName : UIFont.systemFont(ofSize: 15), //your font here
+                NSForegroundColorAttributeName : UIColor.red
+                ])
             let alert = UIAlertController(title: "Game Over",
                                           message: "Try Again",
                                           preferredStyle: .alert)
             let defaultButton = UIAlertAction(title: "OK",
                                               style: .default) {(_) in
                                                 // your defaultButton action goes here
+                                                
                                                 self.s = ""
                                                 self.luckyWord = ""
                                                 self.scored = 0
                                                 self.incorrect = 0
                                                 self.refresh()
+                                                self.performSegue(withIdentifier: "gameOver", sender: self)
             }
+            
+            alert.setValue(attributedString, forKey: "attributedTitle")
             alert.addAction(defaultButton)
             present(alert, animated: true) {
                 // completion goes here
             }
         }
         if score.text == "80" {
+            
             s = ""
             luckyWord = ""
             scored = 0
             incorrect = 0
+            let attributedString = NSAttributedString(string: "You Won !", attributes: [
+                NSFontAttributeName : UIFont.systemFont(ofSize: 15), //your font here
+                NSForegroundColorAttributeName : UIColor.green
+                ])
             let alert = UIAlertController(title: "You Won !",
                                           message: "You have reach the end, game will now restart\nThanks for playing...",
                                           preferredStyle: .alert)
             let defaultButton = UIAlertAction(title: "OK",
                                               style: .default) {(_) in
                                                 // your defaultButton action goes here
+                                                
                                                 self.s = ""
                                                 self.luckyWord = ""
                                                 self.scored = 0
                                                 self.incorrect = 0
                                                 self.refresh()
+                                                self.performSegue(withIdentifier: "gameOver", sender: self)
             }
+            alert.setValue(attributedString, forKey: "attributedTitle")
             alert.addAction(defaultButton)
             present(alert, animated: true) {
                 // completion goes here
-                
+            }
+        }
+    }
+    
+    func highScoreCheck() {
+        print (Int(defaults.string(forKey: "highestScore")!)!)
+        if let scored1 = Int(defaults.string(forKey: "highestScore")!) as? Int {
+            print (scored1)
+            print (self.scored)
+            if scored1 < self.scored {
+                defaults.set("\(self.scored)", forKey: "highestScore")
             }
         }
     }
